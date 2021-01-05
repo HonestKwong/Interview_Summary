@@ -63,43 +63,50 @@ linux编程肯定用的到,非常好用.
 
 
 
-2.2 ps
+### 2.2 ps
 
 
 
-2.3 chmod
+### 2.3 chmod
 
 
 
-2.4 dpkg
+### 2.4 dpkg
+
+​		deb文件是linux发行版debian系统的安装包格式，还有像基于debian系统的发型版ubuntu等系统就是使用的deb格式安装包，我们可以使用dpkg命令进行安装管理这些deb安装包文件。
+
+​		**sudo dpkg -i deb文件名**
+
+### 2.5 apt-get
+
+​		**apt-get**命令是Debian Linux发行版中的APT软件包管理工具。所有基于Debian的发行都使用这个包管理系统。deb包可以把一个应用的文件包在一起，大体就如同Windows上的安装文件。
+
+```shell
+apt-get install packagename
+apt-get remove packagename
+```
+
+### 2.6 stat
 
 
 
-2.5 apt-get
+### 2.7 git
 
 
 
-2.6 stat
+### 2.8 netstat
+
+sudo netstat -tap | grep mysql
+
+### 2.9 ln
 
 
 
-2.7 git
+### 2.10 gcc/gdb
 
 
 
-2.8 netstat
-
-
-
-2.9 ln
-
-
-
-2.10 gcc/gdb
-
-
-
-2.11
+### 2.11
 
 
 
@@ -146,6 +153,24 @@ linux编程肯定用的到,非常好用.
 - **ifcitx**
 
   ibus真不行
+
+- mysql 数据库软件 安装:
+
+  (1)sudo apt update
+
+  (2)sudo apt install mysql-server
+
+  (3)sudo mysql_secure_installation //在安装完 MySQL 之后，应该运行一下包含的安全脚本：
+
+  具体步骤:
+
+  https://blog.csdn.net/liang19890820/article/details/105071479
+
+  https://cloud.tencent.com/developer/article/1592103
+
+- 
+
+- 
 
   
 
