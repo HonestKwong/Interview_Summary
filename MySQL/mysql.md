@@ -4,6 +4,10 @@
 
 sudo mysql -u root -p 进入mysql? 使用的root用户?
 
+mysql命令行参数说明:
+
+https://www.jianshu.com/p/c604f04b9db5
+
 创建数据源
 
 ```sql
@@ -421,6 +425,163 @@ select p1.prod_id, p1.prod_name from products as p1, products as p2 where p1.ven
 4.自然联结
 
 
+
+使用联结和联结条件 Mysql crash course P112
+
+
+
+第17章. 组合查询
+
+多数SQL查询都只包含从一个或多个表中返回数据的单条色了传统语句Mysql也允许执行多个查询，并将结果作为单个查询结果并返回。
+
+
+
+1.创建组合查询， 使用union操作符来组合sql
+
+```sql
+
+
+select vend_id , prod_id, prod_price from products where prod_price <=5 union select vend_id, prod_id, prod_price from products where vend_id in (1001,1002);
+上下等同
+select vend_id , prod_id, prod_price from products where prod_price<=5 or vend_id in (1001,1002)
+```
+
+
+
+union 从查询结果中自动去除了重复的行。UNION的默认行为是合并重复行，可以通过UNION ALL 而不合并重复行。
+
+在组合查询union中，只使用一条order by 子句， 它必须出现在最后一条select语句之后。例如：
+
+```sql
+
+
+select vend_id , prod_id, prod_price from products where prod_price <=5 union select vend_id, prod_id, prod_price from products where vend_id in (1001,1002) order by vend_id, prod_price;
+```
+
+order by 将排序所有子句。
+
+
+
+第18章 全文本搜索
+
+1.启用全文本搜索支持
+
+不要在导入数据时使用FULLTEXT ， 应该首先导入所有数据，然后在修改表，定义fulltext。 这样有助于更快的导入数据且使索数据的总时间小于导入每行时分别进行索引所需的总时间。
+
+```sql
+CREATE TABLE productnotes
+(
+  note_id    int           NOT NULL AUTO_INCREMENT,
+  prod_id    char(10)      NOT NULL,
+  note_date datetime       NOT NULL,
+  note_text  text          NULL ,
+  PRIMARY KEY(note_id),
+  FULLTEXT(note_text) #fulltext
+) ENGINE=MyISAM;
+
+```
+
+```sql
+select note_text from productnotes where match(note_text) against('rabbit');
+
+```
+
+Match(note_text) 指示Mysql针对指定的列进行搜索， against('rabbit') 指定次rabbit作为搜索文本。由于有两行包含此rabbit，这两个行被返回。
+
+
+
+Match() 和 against()用来建立一个计算列，此列包含全文本搜索计算出的等级值。这是like语句不具有的功能，而且由于数据是索引，全文本还相当快。
+
+2.使用查询搜索
+
+​	查询搜索试图放宽所返回的全文本搜索结果的范围。
+
+```sql
+select note_text from productnotes where match(note_text) against('anvils');
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| note_text                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Multiple customer returns, anvils failing to drop fast enough or falling backwards on purchaser. Recommend that customer considers using heavier anvils. |
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+select note_text from productnotes where match(note_text) against('anvils' with query expansion);
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| note_text                                                                                                                                                |
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Multiple customer returns, anvils failing to drop fast enough or falling backwards on purchaser. Recommend that customer considers using heavier anvils. |
+| Customer complaint:
+Sticks not individually wrapped, too easy to mistakenly detonate all at once.
+Recommend individual wrapping.                         |
+| Customer complaint:
+Not heavy enough to generate flying stars around head of victim. If being purchased for dropping, recommend ANV02 or ANV03 instead.  |
+| Please note that no returns will be accepted if safe opened using explosives.                                                                            |
+| Customer complaint: rabbit has been able to detect trap, food apparently less effective now.                                                             |
+| Customer complaint:
+Circular hole in safe floor can apparently be easily cut with handsaw.                                                               |
+| Matches not included, recommend purchase of matches or detonator (item DTNTR).                                                                           |
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+```
+
+这样做增加了搜索的结果，也增加了很多无用的信息。
+
+
+
+3.布尔文本搜索(可以不用fulltext索引)
+
+要匹配的词，要排斥的词
+
+排列提示
+
+表达式分组
+
+另外一些内容
+
+ 仅在Myisam数据库引擎中支持全文本搜索。
+
+
+
+第19章 插入数据 
+
+1.插入完整的行
+
+```sql
+insert into customers values(NULL, 'Pep E. LaPew', '100 Main Street', 'Los Angeles', 'CA', '90046', 'USA', NULL, NULL);
+
+```
+
+对每一列必须提供一个值。
+
+虽然这种语法简单，但并不安全， 应尽量避免使用。上面的sql高度依赖于表中列的定义次序，并且还依赖于其次序。
+
+
+
+有一种更繁琐的方法、也更安全的方法：
+
+```sql
+ insert into customers(cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email) values('Pep E. LaPew', '100 Main Street', 'Los Angeles', 'CA', '90046', 'USA', NULL, NULL);
+
+```
+
+不一定按照实际表中的次序。即使表的结构改，insert依然可用。
+
+不管使用那种insert语法，都必须给出values的正确数目。
+
+
+
+省略列， 如果表定义允许，则可省略， 允许NULL值， 默认值。
+
+
+
+2.一次插入多个行：
+
+P135
+
+
+
+3.插入检索出的数据：
+
+P138
 
 
 

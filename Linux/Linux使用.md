@@ -46,6 +46,15 @@
 - Win + F：搜索/浏览文件
 - Win + M：搜索/浏览音乐文件
 - Win：搜索/浏览程序、文件、音乐文件等
+- Pirnt Screen 为截屏键 
+- ＃保存到文件夹，主目录（home）下的图片文件夹中 
+- Print Screen  #截取整个桌面
+-  Alt + Print Screen #截取选中的窗口 
+- Shift + Print Screen #自由选区 
+- ＃剪贴板 
+- Ctrl + Print Screen  #整个桌面 
+- Ctrl + Alt + Print Screen #选中的窗口
+-  Shift + Ctrl + Print Screen #自由选区
 
 
 
@@ -106,7 +115,11 @@ sudo netstat -tap | grep mysql
 
 
 
-### 2.11
+### 2.11 snap
+
+Snappy是一个软件部署和软件包管理系统，最早由Canonical公司为了Ubuntu移动电话操作系统而设计和构建。
+
+https://m.linuxidc.com/Linux/2018-05/152385.htm
 
 
 
