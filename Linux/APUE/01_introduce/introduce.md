@@ -42,7 +42,7 @@ echo $SHELL
 
 ### 主键盘快捷建
 
-![image-20210119234202984](/home/kwong/.config/Typora/typora-user-images/image-20210119234202984.png)
+![image-20210119234202984](introduce.assets/image-20210119234202984.png)
 
 ctrl + u 直接清除命令行
 
@@ -52,7 +52,7 @@ ctrl + u 直接清除命令行
 
 类unix的目录结构
 
-![image-20210119234513072](/home/kwong/.config/Typora/typora-user-images/image-20210119234513072.png)
+![image-20210119234513072](introduce.assets/image-20210119234513072.png)
 
 linux 系统中 “所见皆文件”。
 
@@ -144,7 +144,9 @@ rmdir 只能删除空目录, rm -r 递归删除, 这里-r 代表递归
 
 cp hello.c hello.cpp
 
-![image-20210120153057255](introduce.assets/image-20210120153057255.png)创建一个新目录
+![image-20210120153057255](introduce.assets/image-20210120153057255.png)
+
+创建一个新目录
 
 拷贝整个目录需要 cp -a  或 cp -r
 
