@@ -1,9 +1,9 @@
 /***********************************************************
-  > File Name: open.c
+  > File Name: mymv.c
   > Author: Kwong
   > Mail: khheng0@gmail.com
-  > Created Time: 2021年01月22日 星期五 21时43分01秒
-    > Modified Time:2021年01月24日 星期日 16时34分53秒
+  > Created Time: 2021年01月25日 星期一 14时45分05秒
+    > Modified Time:2021年01月25日 星期一 14时45分43秒
  *******************************************************/
 
 #include <stdio.h>
@@ -13,14 +13,13 @@
 #include <pthread.h>
 #include <stdio.h>
 #include <fcntl.h>
-#include <errno.h>
+
 int main(int argc,char* argv[])
 {
-    int fd;
-    fd = open("./dict.txt", O_RDONLY , 0644);
-     
-    printf("fd = %d\n", fd);
-    close(fd);
+    link(argv[1], argv[2]);
+
+    unlink(argv[1]);
+
     return 0;
 }
 

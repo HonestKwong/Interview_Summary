@@ -102,7 +102,7 @@ file 读符号表
 
 ​		2.依赖条件不存在,找寻新的规则去产生依赖.
 
-​		3.ALL:指定makefile的终极目标.
+​		**3.ALL:指定makefile的终极目标.**
 
 ​	2个函数以及clean: ($ 代表取值)
 
@@ -152,17 +152,17 @@ file 读符号表
 
 
 
+![image-20210124134753887](03_gdb_makefile.assets/image-20210124134753887.png)
 
 
 
+![image-20210124134920249](03_gdb_makefile.assets/image-20210124134920249.png)
 
 
 
+![image-20210124135139901](03_gdb_makefile.assets/image-20210124135139901.png)
 
 
 
-
-
-
-
+![image-20210124135317219](03_gdb_makefile.assets/image-20210124135317219.png)
 
