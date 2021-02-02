@@ -27,3 +27,6 @@
 !*.sql
 !makefile*
 !Makefile*
+!vim*
+!*.sh
+!*.vim
