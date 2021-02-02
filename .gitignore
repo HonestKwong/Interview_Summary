@@ -21,6 +21,6 @@
 !.**/*.md
 !makefile
 !Makefile
-!.jpg
-!.png
+!.**/*.jpg
+!.**/*.png
 !LISENCE
