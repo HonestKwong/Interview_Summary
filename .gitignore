@@ -25,3 +25,5 @@
 !*.png
 !LISENCE
 !*.sql
+!makefile*
+!Makefile*
