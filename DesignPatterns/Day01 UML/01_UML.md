@@ -1,0 +1,76 @@
+# 01 UML
+
+uml统一建模语言
+
+<img src="01_UML.assets/image-20210225131922145.png" alt="image-20210225131922145" style="zoom:50%;" />
+
+<img src="01_UML.assets/image-20210225131958654.png" alt="image-20210225131958654" style="zoom:50%;" />
+
+![image-20210225142247912](01_UML.assets/image-20210225142247912.png)
+
+![image-20210225142918757](01_UML.assets/image-20210225142918757.png)
+
+![image-20210225143438545](01_UML.assets/image-20210225143438545.png)
+
+![image-20210225143706413](01_UML.assets/image-20210225143706413.png)
+
+![image-20210225144511329](01_UML.assets/image-20210225144511329.png)
+
+![image-20210225144531126](01_UML.assets/image-20210225144531126.png)
+
+
+
+<img src="01_UML.assets/image-20210225144806448.png" alt="image-20210225144806448" style="zoom:67%;" />
+
+![image-20210225145258775](01_UML.assets/image-20210225145258775.png)
+
+
+
+
+
+![image-20210225154741547](01_UML.assets/image-20210225154741547.png)
+
+![image-20210225155403264](01_UML.assets/image-20210225155403264.png)
+
+![image-20210225155500632](01_UML.assets/image-20210225155500632.png)
+
+![image-20210225155521183](01_UML.assets/image-20210225155521183.png)
+
+![image-20210225160110063](01_UML.assets/image-20210225160110063.png)
+
+
+
+# 设计模式概述
+
+![image-20210225161135496](01_UML.assets/image-20210225161135496.png)
+
+![image-20210225161242473](01_UML.assets/image-20210225161242473.png)
+
+
+
+<img src="01_UML.assets/image-20210225161659908.png" alt="image-20210225161659908" style="zoom:50%;" />
+
+![image-20210225161807460](01_UML.assets/image-20210225161807460.png)
+
+![image-20210225161855441](01_UML.assets/image-20210225161855441.png)
+
+![image-20210225161908150](01_UML.assets/image-20210225161908150.png)
+
+
+
+![image-20210225164853774](01_UML.assets/image-20210225164853774.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

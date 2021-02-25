@@ -31,3 +31,5 @@
 !*.sh
 !*.vim
 !*.html
+!*.snippet
+!*.mdj

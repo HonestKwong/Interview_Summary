@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>#2</Title>
+            <Shortcut>#2</Shortcut>
+            <Description>c++语言main函数</Description>
+            <Author>Microsoft Corporation</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+                <SnippetType>SurroundsWith</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>expression</ID>
+                    <ToolTip>要计算的表达式</ToolTip>
+                    <Default>true</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="cpp"><![CDATA[#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+    $selected$$end$
+
+    system("pause");
+    return EXIT_SUCCESS;
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
