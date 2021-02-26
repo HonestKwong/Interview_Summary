@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="LinkStack.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="栈的应用_中缀转后缀.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="根据后缀表达式求解.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{891d6e5a-037a-48e5-9217-06db562acef9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{02020478-10e8-4904-bc39-077ab8275852}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LinkStack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

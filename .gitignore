@@ -33,3 +33,5 @@
 !*.html
 !*.snippet
 !*.mdj
+!*.vcxproj.filters
+!*.vcxproj
