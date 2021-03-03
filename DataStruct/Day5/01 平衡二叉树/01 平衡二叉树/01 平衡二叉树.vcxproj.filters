@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="平衡二叉树.cpp">
+    <ClCompile Include="TestBST.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BalanceSearchTree.cpp">
+    <ClCompile Include="BalanceSearchTree.hpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

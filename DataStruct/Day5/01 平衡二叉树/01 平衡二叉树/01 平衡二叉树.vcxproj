@@ -110,8 +110,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BalanceSearchTree.cpp" />
-    <ClCompile Include="平衡二叉树.cpp" />
+    <ClCompile Include="BalanceSearchTree.hpp" />
+    <ClCompile Include="TestBST.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
